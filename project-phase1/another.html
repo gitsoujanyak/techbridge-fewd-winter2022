@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>
+        Select all text in HTML text input when clicked
+    </title>
+</head>
+  
+<body>
+    Input Text:
+    <br>
+    <input type="text"
+           value="GeeksforGeeks"
+           id="eid">
+  
+    <button type="button" 
+            onclick="myFunction()">
+      Try it
+  </button>
+  
+    <script>
+        function myFunction() {
+            document.getElementById(
+              "eid").select();
+        }
+        function findInList() {
+   //find In List
+   let tbTextToFind = document.getElementById("tbTextToFind");
+    tbTextToFind.value = '';
+
+    //highlight spans
+    let spans = document.getElementsByTagName('span');
+    console.log("spans: ", spans);
+    for (let index = 0; index < ID.length; index++) {
+        spans[index].classList.add('spanHighlighted');
+    }
+}
+    </script>
+  
+</body>
+  
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+  <title>Welcome to Rare Book Store</title>
+  <body style="background-color:powderblue;">
+</head>
+<body>
+  <h1>Rare Book Store - Inventory System</h1> <br><br>
+  <style>
+    h1 {text-align: center;}
+    </style>
+  <h2>Rare Book Store - List Of Books</h1> <br><br>
+    <style>
+      h1 {text-align: center;}
+      </style> 
+
+  <h2>Rare Book Search</h2>
+
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Search</button>
+  
+      <form class="modal-content" action="/action_page.html">
+      <div class="container">
+        <h1>Rare Book Search</h1>
+        <hr>
+        <label for="author"><b>Author</b></label>
+        <input type="text" placeholder="Enter author" name="author">
+  
+        <label for="title"><b>Title</b></label>
+        <input type="text" placeholder="Enter title" name="title">
+  
+        <label for="price"><b>Price($)</b></label>
+        <input type="number" placeholder="price" name="price">
+        
+         
+        <div class="clearfix">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <button type="search" class="signupbtn">Search</button>
+        </div>
+        <script>
+            var async = require('async');
+            var Book = require('../models/book');
+            exports.author_detail = function(req, res, next) {
+
+async.parallel({
+    author: function(callback) {
+        Author.findById(req.params.id)
+          .exec(callback)
+    },
+    authors_books: function(callback) {
+      Book.find({ 'author': req.params.id },'title summary')
+      .exec(callback)
+    },
+}, function(err, results) {
+    if (err) { return next(err); } // Error in API usage.
+    if (results.author==null) { // No results.
+        var err = new Error('Author not found');
+        err.status = 404;
+        return next(err);
+    }
+    // Successful, so render.
+    res.render('author_detail', { title: 'Author Detail', author: results.author, author_books: results.authors_books } );
+});
+
+        </script>
+    </form>
+  </div>
+  
+  <script>
+  // Get the modal
+  var modal = document.getElementById('id01');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+  
+  </body>
+  </html>
+
+

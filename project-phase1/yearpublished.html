@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookArray</title>
+    </head>
+<body>
+    <p id="demo"></p>
+        <script>
+      const Booknames = [
+        {Title:"The Declaration of Independence", YearPublished:1776},
+        {Title:"Shakespeare's First Folio",YearPublished:1622},
+        {Title:"The Gutenberg Bible",YearPublished:1440},
+        {Title:"The Birds of America",YearPublished:1820},
+        {Title:"The Codex of Leicester",YearPublished:1994},
+        {Title:"Don Quixote",YearPublished:1605},
+        {Title:"Tamerlane and Other Poems",YearPublished:1827},
+        {Title:"The Tales of Beedle the Bard",YearPublished:1779}
+      ];
+      displayBooknames();
+      Booknames.sort(function(a,b){return a.YearPublished - b.YearPublished});
+      displayBooknames();
+
+      function displayBooknames() {
+          document.getElementById("demo").innerHTML =
+          Booknames[0].Title +" " +Booknames[0].YearPublished + "<br>" +
+          Booknames[1].Title +" " +Booknames[1].YearPublished + "<br>" +
+          Booknames[2].Title +" " +Booknames[2].YearPublished + "<br>" +
+          Booknames[3].Title +" " +Booknames[3].YearPublished + "<br>" +
+          Booknames[4].Title +" " +Booknames[4].YearPublished + "<br>" +
+          Booknames[5].Title +" " +Booknames[5].YearPublished + "<br>" +
+          Booknames[6].Title +" " +Booknames[6].YearPublished + "<br>" +
+          Booknames[7].Title +" " +Booknames[7].YearPublished;         
+        
+        }
+        </script>
+    </body>
+</html>

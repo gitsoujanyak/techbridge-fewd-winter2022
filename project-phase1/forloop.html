@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For loop</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        const Booknames = [
+        "Title:The Declaration of Independence YearPublished:1776",
+        "Title:Shakespeare's First Folio YearPublished:1622",
+        "Title:The Gutenberg Bible YearPublished:1440",
+        "Title:The Birds of America YearPublished:1820",
+        "Title:The Codex of Leicester YearPublished:1994",
+        "Title:Don Quixote YearPublished:1605",
+        "Title:Tamerlane and Other Poems YearPublished:1827",
+        "Title:The Tales of Beedle the Bard YearPublished:1779"
+      ];
+      let i,len,text;
+      for (i=0, len = Booknames.length, text = "";i<len;i++){
+          text +=Booknames[i] + "<br>";
+      }
+      document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>

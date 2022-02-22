@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #myInput {
+            background-image: url('/css/searchicon.png');
+            background-position: 10px 12px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+
+        #myUL {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #myUL li a {
+            border: 1px solid #ddd;
+            margin-top: -1px;
+            /* Prevent double borders */
+            background-color: #f6f6f6;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+            display: block
+        }
+
+        #myUL li a:hover:not(.header) {
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>List of Books</h2>
+
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for books.." title="Type in a name">
+
+    <button onclick="sortList()">Sort by Title</button>
+    <!--<button onclick="myFunction2()">Sort by Price</button>
+    <button onclick="myFunction3()">Sort by Author</button>-->
+    <p id="demo"></p>
+
+    <ul id="myUL">
+        <li><a href="Independence.html">The Declaration of Independence</a></li>
+        <li><a href="Shakespeare.html">Shakespeare's First Folio</a></li>
+        <li><a href="Gutenberg.html">The Gutenberg Bible</a></li>
+        <li><a href="Birds.html">The Birds of America</a></li>
+        <li><a href="codex.html">The Codex of Leicester</a></li>
+        <li><a href="don.html">Don Quixote</a></li>
+        <li><a href="poems.html">Tamerlane and Other Poems</a></li>
+    </ul>
+
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+  
+
+    </script>
+
+<script>
+function sortList() {
+  var list, i, switching, b, shouldSwitch;
+  list = document.getElementById("myUL");
+  switching = true;
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // start by saying: no switching is done:
+    switching = false;
+    b = list.getElementsByTagName("li");
+    // Loop through all list-items:
+    for (i = 0; i < (b.length - 1); i++) {
+      // start by saying there should be no switching:
+      shouldSwitch = false;
+      /* check if the next item should
+      switch place with the current item: */
+      if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+        /* if next item is alphabetically
+        lower than current item, mark as a switch
+        and break the loop: */
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark the switch as done: */
+      b[i].parentNode.insertBefore(b[i + 1], b[i]);
+      switching = true;
+    }
+  }
+}
+</script>
+
+
+
+<script>
+    var list, i, switching, b, shouldSwitch;
+    list = document.getElementById("myUL");
+    
+
+    function myFunction3() {
+        bookauthors.sort();
+        document.getElementById("li").innerHTML = list;
+    }
+</script>
+
+</body><br>
+<div>
+<form>
+    <button type="submit" formaction="/main.html"> Go Back </button>
+    </form>
+</div>
+</html>

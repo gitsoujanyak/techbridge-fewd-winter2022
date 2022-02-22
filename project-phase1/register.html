@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+  <title>Rare Book Store </title>
+  <body style="background-color:powderblue;">
+    </head>
+<body>
+  <h1>Create your Rare Book Store Account</h1> <br><br>
+  <style>
+    h1 {text-align: left;}
+  </style>
+    <form action="/main.html">
+    <label>Firstname</label>      
+  <input type="text" placeholder="Enter Firstname"  name="firstname" required></input>&nbsp;&nbsp;&nbsp;&nbsp;
+  <label>Lastname</label>      
+  <input type="text" placeholder="Enter Lastname"  name="lastname" required></input>&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+  <label>Username</label>      
+  <input type="text" placeholder="Username@Rarebook.com"  name="username" required></input>&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+  <label>Password</label> 
+  <input type="password" placeholder="Enter Password"  name="password" required></input>&nbsp;&nbsp;&nbsp;
+  <label>Confirm Password</label> 
+    <input type="password" placeholder="Confirm Password" name="confirm password" required>
+  <button type="cancel" formaction="/main.html" class="btn">Cancel</button>
+  <!--<button type="submit" formaction="/main.html" class="btn">Create Account</button>-->
+  
+  <button onclick="myFunction()">Create Account</button>
+  <p id="demo"></p>
+
+<script>
+function myFunction() {
+  var txt;
+  if (confirm("Create Account!")){
+    txt = "Account created!";
+  } else {
+    txt = "Cancel!";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+<!--<div class="createaccount">
+<button id="myBtn" class="createaccountbtn">Create Account</button>
+<div id="myCreateAccount" class="createaccount-content">
+  </div>
+<script>
+  // Get the button, and when the user clicks on it, execute myFunction
+  document.getElementById("myBtn").onclick = function() {myFunction()};
+  
+  /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+  function myFunction() {
+    document.getElementById("myCreateAccount").classList.toggle("show");
+  }
+  </script>>--
+
+
+  </form>
+</body>
+</html>
+      
+

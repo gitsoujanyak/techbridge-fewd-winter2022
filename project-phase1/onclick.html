@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <button onclick="myFunction1()">Sort by Title</button>
+    <button onclick="myFunction2()">Sort by Price</button>
+    <button onclick="myFunction3()">Sort by Author</button>
+    <p id="demo"></p>
+    <script>
+        var booknames = ["Pete the cat", "Orange is the new Color", "Red is bringht", "Purple is cool"];
+
+        document.getElementById("demo").innerHTML = booknames;
+
+        function myFunction1() {
+            booknames.sort();
+            document.getElementById("demo").innerHTML = booknames;
+        }
+    </script>
+
+    <script>
+        var price = [10, 4, 5, 1];
+
+        document.getElementById("demo").innerHTML = price;
+
+        function myFunction2() {
+            price.sort(function(a, b) {
+                return a - b
+            });
+            document.getElementById("demo").innerHTML = price;
+        }
+    </script>
+
+    <script>
+        var bookauthors = ["Emma Tucker", "Jonathan F", "Soujanya K", "Satvik V"];
+
+        document.getElementById("demo").innerHTML = bookauthors;
+
+        function myFunction3() {
+            bookauthors.sort();
+            document.getElementById("demo").innerHTML = bookauthors;
+        }
+    </script>
+
+</body>
+
+</html>

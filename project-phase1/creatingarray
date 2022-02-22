@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creating an Array</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+      const Booknames = [
+        "The Declaration of Independence",
+        "Shakespeare's First Folio",
+        "The Gutenberg Bible",
+        "The Birds of America",
+        "The Codex of Leicester",
+        "Don Quixote",
+        "Tamerlane and Other Poems",
+        "Don Quixote"
+      ];
+      document.getElementById("demo").innerHTML = Booknames;
+      /*to add a new element into array*/
+      Booknames.push("The Tales of Beedle the Bard");
+       /*to know the index value of the first element in an array*/
+      Booknames[0] ="The Declaration of Independence";
+      Booknames.sort();
+      document.getElementById("demo1").innerHTML = Booknames;     
+
+    </script>
+  </body>
+</html>

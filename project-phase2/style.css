@@ -1,0 +1,31 @@
+
+        table {
+            border-spacing: 0;
+            width: 100%;
+            border: 1px solid black;
+        }
+
+        th {
+            cursor: pointer;
+            border: 1px solid black;
+        }
+        th,
+       
+        td {
+            text-align: left;
+            padding: 16px;
+            border: 1px solid black;
+        }
+
+        button {
+            border: 1px solid black;   
+        }
+       
+        body {
+            background-color:powderblue
+        }
+        
+        input {
+            border: 1px solid black;
+        }
+        

@@ -6,6 +6,8 @@
 
 <body style="background-color:powderblue;">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+<script src="processes.js"></script>
   </head>
 
   <body>
@@ -15,6 +17,8 @@
         text-align: center;
       }
     </style>
+    <div id="userDiv" onload="doUserInfo();"></div>
+    
     <form>
       <center><button type="submit" formaction="/search-book-list.html"> Search Inventory
         </button>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -27,6 +31,9 @@
         <img src="book.jpg" width="100%" height="auto" ;>
       </div>
     </form>
+    <script>
+      doUserInfo();
+  </script>
   </body>
 
 </html>

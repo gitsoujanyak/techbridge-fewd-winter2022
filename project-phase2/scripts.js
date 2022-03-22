@@ -364,3 +364,29 @@ function bblSort() {
   // console.log(arr);
   console.log(temp);
 }
+
+function showMessage() {
+  alert("Password Created Successfully!")
+}
+
+function showMessage3() {
+  alert("Book deleted successfully!");
+}
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+
+function showMessage1() {
+alert("Book added successfully");
+}
+
+function showMessage2() {
+alert("Book updated successfully!");
+}
+
+

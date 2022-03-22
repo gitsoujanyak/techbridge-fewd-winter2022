@@ -4,46 +4,37 @@
     <title>Welcome to Rare Book Store</title>
 
 <body style="background-color:powderblue;">
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-    <form>
-        <h1>Rare Book Store - Inventory System</h1> <br>
-        <style>
-            h1 {
-                text-align: center;
-            }
-        </style>
-        
-        <p> <strong>Enter your recovery email </strong> </p>
-        <style>
-            p {
-                text-align: center;
-                font-family: "Arial";
-            }
-        </style>
+        <!--<form>-->
+            <p> <strong>Enter your recovery email </strong> </p>
+            <style>
+                p {
+                    text-align: center;
+                    font-family: "Arial";
+                }
+            </style>
 
 
-        <label>Email ID</label> &nbsp;
-        <input type="alphanumeric" placeholder="Enter Email ID" name="Email ID"
-            required></input>&nbsp;&nbsp;&nbsp;&nbsp;
-        <label>Password</label> &nbsp;
-        <input type="password" placeholder="Enter Password" name="password" required></input>&nbsp;&nbsp;&nbsp;
-        <input type="password" placeholder=" Re-enter Password" name="password" required></input>&nbsp;&nbsp;&nbsp;
-        <input type="button" id="btnShowMsg" value="Login" onClick="showMessage()" />&nbsp;&nbsp;&nbsp;&nbsp;
-        <button type="submit" formaction="/index.html">Go Back</button> &nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="createaccount.html">Create Account</a><br><br>
-        <div>
-            <img src="book.jpg" width="100%" height="auto" ;>
-        </div>
-         
-        </form>
+            <label>Email ID</label> &nbsp;
+            <input type="alphanumeric" placeholder="Enter Email ID" name="Email ID"
+                required></input>&nbsp;&nbsp;&nbsp;&nbsp;
+            <label>Password</label> &nbsp;
+            <input type="password" placeholder="Enter Password" name="password" required></input>&nbsp;&nbsp;&nbsp;
+            <input type="password" placeholder=" Re-enter Password" name="password" required></input>&nbsp;&nbsp;&nbsp;
+            <input type="button" id="btnShowMsg" value="Login" onClick="showMessage()" />&nbsp;&nbsp;&nbsp;&nbsp;
+            <!--<button type="submit" formaction="/index.html">Go Back</button> &nbsp;&nbsp;&nbsp;&nbsp;-->
+            <button id="submit" type="button" onclick="location.href='index.html'">Go Back</button>&nbsp;&nbsp;
+            <a href="createaccount.html">Create Account</a><br><br>
+            <div>
+                <img src="book.jpg" width="100%" height="auto" ;>
+            </div>
+
+        <!--</form>-->
     </body>
-    
-    <script>
-        function showMessage() {
-            alert("Password Created Successfully!")
-        }
-    </script>
 
+    
     </html>
